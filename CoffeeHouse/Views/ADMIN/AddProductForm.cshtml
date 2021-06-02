@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewData["Title"] = "AddProductForm";
+}
+
+<h1>Add a Product Below</h1>
+
+<form method="post" action="/ADMIN/AddProduct">
+    Product Name: <input type="text" name="name" /> <br />
+    Product Category: <input type="text" name="category" /> <br />
+    Product Description: <input type="text" name="description" /> <br />
+    Price of New Product: <input type="text" name="price" /> <br />
+    <small>(Please enter new price in decimal form)</small> <br />
+    <br />
+    <br />
+    <input type="submit" value="ADD" />
+
+</form>
+

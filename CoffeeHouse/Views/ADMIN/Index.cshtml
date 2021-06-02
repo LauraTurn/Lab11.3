@@ -1,0 +1,34 @@
+﻿@model List<Product>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Administration Index</h2>
+
+<a href="/ADMIN/AddProductForm" class="btn btn-primary"> Add New Product</a>
+<br />
+<br />
+<br />
+<br />
+
+@foreach (Product produce in Model)
+{
+    <h4>@produce.id. @produce.name </h4>
+    @produce.category
+    <br />
+    @produce.description
+    <br />
+    @produce.price
+    <br />
+
+    <td><a href="/ADMIN/EditForm/@produce.id" class="btn btn-primary"> EDIT </a></td>
+    <td>
+        <a href="/ADMIN/Delete/@produce.id" class="btn btn-danger">DELETE</a>
+    </td>
+
+    <br />
+    <br />
+    <br />
+    <br />
+}
+

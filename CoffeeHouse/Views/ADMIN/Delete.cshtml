@@ -1,0 +1,48 @@
+﻿@model Product
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>PLEASE CONFIRM DELETION</h1>
+<br />
+
+<img src="/Images/nottheway.jpg"
+     width="600"
+     height="400" />
+
+<br />
+<br />
+<br />
+
+<h3>Please consider editing an existing product.</h3>
+
+<p>
+    <strong></strong>
+    There is no way to retrieve data once it has been deleted. <br />
+    Product will need to be added manually after deletion. <br />
+    </strong>
+</p>
+<br />
+<br />
+
+<p>
+    <h4></h4>Are you sure you want to permanently delete this product? <br />
+    <strong>
+        @Model.id.
+        @Model.name
+        <br />
+        @Model.description
+        <br />
+        @Model.price
+        <br />
+    </strong>
+
+</p>
+<br />
+
+
+<!--Neato!  Makes the delete button an html link that asks for confirmation!-->
+<p style="font-weight:bold; font-size: 30px">Click here to @Html.ActionLink("DELETE", "DeleteConfirm", new { id = Model.id },
+
+     new { onclick = "return confirm('Are you ABSOLUTELY sure?');" })
+</p>
